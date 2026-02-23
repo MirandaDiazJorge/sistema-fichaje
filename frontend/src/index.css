@@ -50,6 +50,13 @@ body {
   width: 100%;
 }
 
+.container-lg {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+}
+
 h1, h2, h3 {
   font-weight: 700;
   margin-bottom: 1rem;

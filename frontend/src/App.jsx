@@ -24,6 +24,17 @@ const Layout = ({ children }) => {
 
     return (
         <>
+            <img src="/logo.png" alt="Logo" style={{
+                position: 'fixed',
+                top: '50%',
+                right: '40px',
+                height: '400px',
+                width: 'auto',
+                zIndex: 1000,
+                transform: 'translateY(-50%)',
+                pointerEvents: 'none',
+                opacity: 0.8
+            }} />
             <main style={{ paddingBottom: '90px' }}>{children}</main>
             <nav className="nav">
                 <Link to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>

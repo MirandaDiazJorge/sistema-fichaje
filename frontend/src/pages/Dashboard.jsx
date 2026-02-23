@@ -59,15 +59,16 @@ const Dashboard = () => {
 
     return (
         <div className="container">
-            <header style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <header style={{ marginBottom: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '1rem' }}>
                 <div>
                     <h2 style={{ marginBottom: '0.25rem' }}>Hola, {user.nombre}</h2>
                     <p style={{ color: 'var(--text-muted)' }}>{currentTime.toLocaleDateString()}</p>
                 </div>
-                <div className={`status-badge ${status && !status.hora_salida ? 'status-active' : 'status-inactive'}`}>
-                    {status && !status.hora_salida ? 'Trabajando' : 'Fuera'}
-                </div>
             </header>
+
+            <div className={`status-badge ${status && !status.hora_salida ? 'status-active' : 'status-inactive'}`} style={{ alignSelf: 'center', marginBottom: '2rem' }}>
+                {status && !status.hora_salida ? 'Trabajando' : 'Fuera'}
+            </div>
 
             <div className="glass-card" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', marginBottom: '1rem' }}>Introduce la hora manualmente:</p>
@@ -116,7 +117,7 @@ const Dashboard = () => {
                     <span style={{ fontWeight: '700', color: 'var(--primary)' }}>{status?.hora_salida ? '--:--' : 'En curso'}</span>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
